@@ -32,7 +32,7 @@ public class FirObjects implements Serializable {
     private Long regionId;
     @SerializedName("settlementId")
     @Expose
-    private Integer settlementId;
+    private String settlementId;
     @SerializedName("street")
     @Expose
     private String street;
@@ -82,7 +82,7 @@ public class FirObjects implements Serializable {
      * @param objectId
      * @param apartment
      */
-    public FirObjects(String objectId, Integer srcObject, Integer regionKey, String objectType, String objectCn, String objectCon, Long subjectId, Long regionId, Integer settlementId, String street, String house, String addressNotes, Object okato, String apartment, String nobjectCn, String nobjectCon) {
+    public FirObjects(String objectId, Integer srcObject, Integer regionKey, String objectType, String objectCn, String objectCon, Long subjectId, Long regionId, String settlementId, String street, String house, String addressNotes, Object okato, String apartment, String nobjectCn, String nobjectCon) {
         super();
         this.objectId = objectId;
         this.srcObject = srcObject;
@@ -166,11 +166,11 @@ public class FirObjects implements Serializable {
         this.regionId = regionId;
     }
 
-    public Integer getSettlementId() {
+    public String getSettlementId() {
         return settlementId;
     }
 
-    public void setSettlementId(Integer settlementId) {
+    public void setSettlementId(String settlementId) {
         this.settlementId = settlementId;
     }
 

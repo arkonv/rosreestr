@@ -1,4 +1,3 @@
-
 package ru.smartsarov.rosreestr.json.firobject;
 
 import java.io.Serializable;
@@ -25,10 +24,10 @@ public class ParcelData implements Serializable
     private String dateCreate;
     @SerializedName("dateRemove")
     @Expose
-    private Object dateRemove;
+    private String dateRemove;
     @SerializedName("categoryType")
     @Expose
-    private Object categoryType;
+    private String categoryType;
     @SerializedName("areaValue")
     @Expose
     private Double areaValue;
@@ -40,13 +39,13 @@ public class ParcelData implements Serializable
     private String areaUnit;
     @SerializedName("areaTypeValue")
     @Expose
-    private Object areaTypeValue;
+    private String areaTypeValue;
     @SerializedName("areaUnitValue")
     @Expose
-    private Object areaUnitValue;
+    private String areaUnitValue;
     @SerializedName("categoryTypeValue")
     @Expose
-    private Object categoryTypeValue;
+    private String categoryTypeValue;
     @SerializedName("rightsReg")
     @Expose
     private Boolean rightsReg;
@@ -67,85 +66,85 @@ public class ParcelData implements Serializable
     private String oksType;
     @SerializedName("oksFloors")
     @Expose
-    private Object oksFloors;
+    private String oksFloors;
     @SerializedName("oksUFloors")
     @Expose
-    private Object oksUFloors;
+    private String oksUFloors;
     @SerializedName("oksElementsConstruct")
     @Expose
-    private Object oksElementsConstruct;
+    private String oksElementsConstruct;
     @SerializedName("oksYearUsed")
     @Expose
-    private Object oksYearUsed;
+    private String oksYearUsed;
     @SerializedName("oksInventoryCost")
     @Expose
     private Double oksInventoryCost;
     @SerializedName("oksInn")
     @Expose
-    private Object oksInn;
+    private String oksInn;
     @SerializedName("oksExecutor")
     @Expose
     private String oksExecutor;
     @SerializedName("oksYearBuilt")
     @Expose
-    private Object oksYearBuilt;
+    private String oksYearBuilt;
     @SerializedName("oksCostDate")
     @Expose
-    private Object oksCostDate;
+    private String oksCostDate;
     @SerializedName("rcType")
     @Expose
-    private Object rcType;
+    private String rcType;
     @SerializedName("rcDate")
     @Expose
-    private Object rcDate;
+    private String rcDate;
     @SerializedName("guidUl")
     @Expose
-    private Object guidUl;
+    private String guidUl;
     @SerializedName("guidFl")
     @Expose
-    private Object guidFl;
+    private String guidFl;
     @SerializedName("ciSurname")
     @Expose
-    private Object ciSurname;
+    private String ciSurname;
     @SerializedName("ciFirst")
     @Expose
-    private Object ciFirst;
+    private String ciFirst;
     @SerializedName("ciPatronymic")
     @Expose
-    private Object ciPatronymic;
+    private String ciPatronymic;
     @SerializedName("ciNCertificate")
     @Expose
-    private Object ciNCertificate;
+    private String ciNCertificate;
     @SerializedName("ciPhone")
     @Expose
-    private Object ciPhone;
+    private String ciPhone;
     @SerializedName("ciEmail")
     @Expose
-    private Object ciEmail;
+    private String ciEmail;
     @SerializedName("ciAddress")
     @Expose
-    private Object ciAddress;
+    private String ciAddress;
     @SerializedName("coName")
     @Expose
-    private Object coName;
+    private String coName;
     @SerializedName("coInn")
     @Expose
-    private Object coInn;
+    private String coInn;
     @SerializedName("utilCode")
     @Expose
-    private Object utilCode;
+    private String utilCode;
     @SerializedName("utilByDoc")
     @Expose
-    private Object utilByDoc;
+    private String utilByDoc;
     @SerializedName("cadastralBlockId")
     @Expose
-    private Object cadastralBlockId;
+    private String cadastralBlockId;
     @SerializedName("oksElementsConstructStr")
     @Expose
-    private Object oksElementsConstructStr;
+    private String oksElementsConstructStr;
     @SerializedName("utilCodeDesc")
     @Expose
-    private Object utilCodeDesc;
+    private String utilCodeDesc;
     @SerializedName("parcelStatusStr")
     @Expose
     private String parcelStatusStr;
@@ -208,7 +207,7 @@ public class ParcelData implements Serializable
      * @param oksYearUsed
      * @param parcelCn
      */
-    public ParcelData(String id, Integer regionKey, String parcelCn, String parcelStatus, String dateCreate, Object dateRemove, Object categoryType, Double areaValue, String areaType, String areaUnit, Object areaTypeValue, Object areaUnitValue, Object categoryTypeValue, Boolean rightsReg, Double cadCost, String cadUnit, String dateCost, Integer oksFlag, String oksType, Object oksFloors, Object oksUFloors, Object oksElementsConstruct, Object oksYearUsed, Double oksInventoryCost, Object oksInn, String oksExecutor, Object oksYearBuilt, Object oksCostDate, Object rcType, Object rcDate, Object guidUl, Object guidFl, Object ciSurname, Object ciFirst, Object ciPatronymic, Object ciNCertificate, Object ciPhone, Object ciEmail, Object ciAddress, Object coName, Object coInn, Object utilCode, Object utilByDoc, Object cadastralBlockId, Object oksElementsConstructStr, Object utilCodeDesc, String parcelStatusStr) {
+    public ParcelData(String id, Integer regionKey, String parcelCn, String parcelStatus, String dateCreate, String dateRemove, String categoryType, Double areaValue, String areaType, String areaUnit, String areaTypeValue, String areaUnitValue, String categoryTypeValue, Boolean rightsReg, Double cadCost, String cadUnit, String dateCost, Integer oksFlag, String oksType, String oksFloors, String oksUFloors, String oksElementsConstruct, String oksYearUsed, Double oksInventoryCost, String oksInn, String oksExecutor, String oksYearBuilt, String oksCostDate, String rcType, String rcDate, String guidUl, String guidFl, String ciSurname, String ciFirst, String ciPatronymic, String ciNCertificate, String ciPhone, String ciEmail, String ciAddress, String coName, String coInn, String utilCode, String utilByDoc, String cadastralBlockId, String oksElementsConstructStr, String utilCodeDesc, String parcelStatusStr) {
         super();
         this.id = id;
         this.regionKey = regionKey;
@@ -299,19 +298,19 @@ public class ParcelData implements Serializable
         this.dateCreate = dateCreate;
     }
 
-    public Object getDateRemove() {
+    public String getDateRemove() {
         return dateRemove;
     }
 
-    public void setDateRemove(Object dateRemove) {
+    public void setDateRemove(String dateRemove) {
         this.dateRemove = dateRemove;
     }
 
-    public Object getCategoryType() {
+    public String getCategoryType() {
         return categoryType;
     }
 
-    public void setCategoryType(Object categoryType) {
+    public void setCategoryType(String categoryType) {
         this.categoryType = categoryType;
     }
 
@@ -339,27 +338,27 @@ public class ParcelData implements Serializable
         this.areaUnit = areaUnit;
     }
 
-    public Object getAreaTypeValue() {
+    public String getAreaTypeValue() {
         return areaTypeValue;
     }
 
-    public void setAreaTypeValue(Object areaTypeValue) {
+    public void setAreaTypeValue(String areaTypeValue) {
         this.areaTypeValue = areaTypeValue;
     }
 
-    public Object getAreaUnitValue() {
+    public String getAreaUnitValue() {
         return areaUnitValue;
     }
 
-    public void setAreaUnitValue(Object areaUnitValue) {
+    public void setAreaUnitValue(String areaUnitValue) {
         this.areaUnitValue = areaUnitValue;
     }
 
-    public Object getCategoryTypeValue() {
+    public String getCategoryTypeValue() {
         return categoryTypeValue;
     }
 
-    public void setCategoryTypeValue(Object categoryTypeValue) {
+    public void setCategoryTypeValue(String categoryTypeValue) {
         this.categoryTypeValue = categoryTypeValue;
     }
 
@@ -411,35 +410,35 @@ public class ParcelData implements Serializable
         this.oksType = oksType;
     }
 
-    public Object getOksFloors() {
+    public String getOksFloors() {
         return oksFloors;
     }
 
-    public void setOksFloors(Object oksFloors) {
+    public void setOksFloors(String oksFloors) {
         this.oksFloors = oksFloors;
     }
 
-    public Object getOksUFloors() {
+    public String getOksUFloors() {
         return oksUFloors;
     }
 
-    public void setOksUFloors(Object oksUFloors) {
+    public void setOksUFloors(String oksUFloors) {
         this.oksUFloors = oksUFloors;
     }
 
-    public Object getOksElementsConstruct() {
+    public String getOksElementsConstruct() {
         return oksElementsConstruct;
     }
 
-    public void setOksElementsConstruct(Object oksElementsConstruct) {
+    public void setOksElementsConstruct(String oksElementsConstruct) {
         this.oksElementsConstruct = oksElementsConstruct;
     }
 
-    public Object getOksYearUsed() {
+    public String getOksYearUsed() {
         return oksYearUsed;
     }
 
-    public void setOksYearUsed(Object oksYearUsed) {
+    public void setOksYearUsed(String oksYearUsed) {
         this.oksYearUsed = oksYearUsed;
     }
 
@@ -451,11 +450,11 @@ public class ParcelData implements Serializable
         this.oksInventoryCost = oksInventoryCost;
     }
 
-    public Object getOksInn() {
+    public String getOksInn() {
         return oksInn;
     }
 
-    public void setOksInn(Object oksInn) {
+    public void setOksInn(String oksInn) {
         this.oksInn = oksInn;
     }
 
@@ -467,163 +466,163 @@ public class ParcelData implements Serializable
         this.oksExecutor = oksExecutor;
     }
 
-    public Object getOksYearBuilt() {
+    public String getOksYearBuilt() {
         return oksYearBuilt;
     }
 
-    public void setOksYearBuilt(Object oksYearBuilt) {
+    public void setOksYearBuilt(String oksYearBuilt) {
         this.oksYearBuilt = oksYearBuilt;
     }
 
-    public Object getOksCostDate() {
+    public String getOksCostDate() {
         return oksCostDate;
     }
 
-    public void setOksCostDate(Object oksCostDate) {
+    public void setOksCostDate(String oksCostDate) {
         this.oksCostDate = oksCostDate;
     }
 
-    public Object getRcType() {
+    public String getRcType() {
         return rcType;
     }
 
-    public void setRcType(Object rcType) {
+    public void setRcType(String rcType) {
         this.rcType = rcType;
     }
 
-    public Object getRcDate() {
+    public String getRcDate() {
         return rcDate;
     }
 
-    public void setRcDate(Object rcDate) {
+    public void setRcDate(String rcDate) {
         this.rcDate = rcDate;
     }
 
-    public Object getGuidUl() {
+    public String getGuidUl() {
         return guidUl;
     }
 
-    public void setGuidUl(Object guidUl) {
+    public void setGuidUl(String guidUl) {
         this.guidUl = guidUl;
     }
 
-    public Object getGuidFl() {
+    public String getGuidFl() {
         return guidFl;
     }
 
-    public void setGuidFl(Object guidFl) {
+    public void setGuidFl(String guidFl) {
         this.guidFl = guidFl;
     }
 
-    public Object getCiSurname() {
+    public String getCiSurname() {
         return ciSurname;
     }
 
-    public void setCiSurname(Object ciSurname) {
+    public void setCiSurname(String ciSurname) {
         this.ciSurname = ciSurname;
     }
 
-    public Object getCiFirst() {
+    public String getCiFirst() {
         return ciFirst;
     }
 
-    public void setCiFirst(Object ciFirst) {
+    public void setCiFirst(String ciFirst) {
         this.ciFirst = ciFirst;
     }
 
-    public Object getCiPatronymic() {
+    public String getCiPatronymic() {
         return ciPatronymic;
     }
 
-    public void setCiPatronymic(Object ciPatronymic) {
+    public void setCiPatronymic(String ciPatronymic) {
         this.ciPatronymic = ciPatronymic;
     }
 
-    public Object getCiNCertificate() {
+    public String getCiNCertificate() {
         return ciNCertificate;
     }
 
-    public void setCiNCertificate(Object ciNCertificate) {
+    public void setCiNCertificate(String ciNCertificate) {
         this.ciNCertificate = ciNCertificate;
     }
 
-    public Object getCiPhone() {
+    public String getCiPhone() {
         return ciPhone;
     }
 
-    public void setCiPhone(Object ciPhone) {
+    public void setCiPhone(String ciPhone) {
         this.ciPhone = ciPhone;
     }
 
-    public Object getCiEmail() {
+    public String getCiEmail() {
         return ciEmail;
     }
 
-    public void setCiEmail(Object ciEmail) {
+    public void setCiEmail(String ciEmail) {
         this.ciEmail = ciEmail;
     }
 
-    public Object getCiAddress() {
+    public String getCiAddress() {
         return ciAddress;
     }
 
-    public void setCiAddress(Object ciAddress) {
+    public void setCiAddress(String ciAddress) {
         this.ciAddress = ciAddress;
     }
 
-    public Object getCoName() {
+    public String getCoName() {
         return coName;
     }
 
-    public void setCoName(Object coName) {
+    public void setCoName(String coName) {
         this.coName = coName;
     }
 
-    public Object getCoInn() {
+    public String getCoInn() {
         return coInn;
     }
 
-    public void setCoInn(Object coInn) {
+    public void setCoInn(String coInn) {
         this.coInn = coInn;
     }
 
-    public Object getUtilCode() {
+    public String getUtilCode() {
         return utilCode;
     }
 
-    public void setUtilCode(Object utilCode) {
+    public void setUtilCode(String utilCode) {
         this.utilCode = utilCode;
     }
 
-    public Object getUtilByDoc() {
+    public String getUtilByDoc() {
         return utilByDoc;
     }
 
-    public void setUtilByDoc(Object utilByDoc) {
+    public void setUtilByDoc(String utilByDoc) {
         this.utilByDoc = utilByDoc;
     }
 
-    public Object getCadastralBlockId() {
+    public String getCadastralBlockId() {
         return cadastralBlockId;
     }
 
-    public void setCadastralBlockId(Object cadastralBlockId) {
+    public void setCadastralBlockId(String cadastralBlockId) {
         this.cadastralBlockId = cadastralBlockId;
     }
 
-    public Object getOksElementsConstructStr() {
+    public String getOksElementsConstructStr() {
         return oksElementsConstructStr;
     }
 
-    public void setOksElementsConstructStr(Object oksElementsConstructStr) {
+    public void setOksElementsConstructStr(String oksElementsConstructStr) {
         this.oksElementsConstructStr = oksElementsConstructStr;
     }
 
-    public Object getUtilCodeDesc() {
+    public String getUtilCodeDesc() {
         return utilCodeDesc;
     }
 
-    public void setUtilCodeDesc(Object utilCodeDesc) {
+    public void setUtilCodeDesc(String utilCodeDesc) {
         this.utilCodeDesc = utilCodeDesc;
     }
 

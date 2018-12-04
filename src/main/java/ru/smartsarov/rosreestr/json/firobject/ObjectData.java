@@ -1,4 +1,3 @@
-
 package ru.smartsarov.rosreestr.json.firobject;
 
 import java.io.Serializable;
@@ -31,16 +30,16 @@ public class ObjectData implements Serializable
     private String dateLoad;
     @SerializedName("addressNote")
     @Expose
-    private Object addressNote;
+    private String addressNote;
     @SerializedName("objectCn")
     @Expose
     private String objectCn;
     @SerializedName("objectCon")
     @Expose
-    private Object objectCon;
+    private String objectCon;
     @SerializedName("objectInv")
     @Expose
-    private Object objectInv;
+    private String objectInv;
     @SerializedName("objectUn")
     @Expose
     private String objectUn;
@@ -55,10 +54,10 @@ public class ObjectData implements Serializable
     private Integer brkStatus;
     @SerializedName("brkDate")
     @Expose
-    private Object brkDate;
+    private String brkDate;
     @SerializedName("formRights")
     @Expose
-    private Object formRights;
+    private String formRights;
     @SerializedName("objectAddress")
     @Expose
     private ObjectAddress objectAddress;
@@ -92,7 +91,7 @@ public class ObjectData implements Serializable
      * @param id
      * @param objectUn
      */
-    public ObjectData(String id, Integer regionKey, Integer srcObject, String objectType, String objectName, Integer removed, String dateLoad, Object addressNote, String objectCn, Object objectCon, Object objectInv, String objectUn, String rsCode, String actualDate, Integer brkStatus, Object brkDate, Object formRights, ObjectAddress objectAddress) {
+    public ObjectData(String id, Integer regionKey, Integer srcObject, String objectType, String objectName, Integer removed, String dateLoad, String addressNote, String objectCn, String objectCon, String objectInv, String objectUn, String rsCode, String actualDate, Integer brkStatus, String brkDate, String formRights, ObjectAddress objectAddress) {
         super();
         this.id = id;
         this.regionKey = regionKey;
@@ -170,11 +169,11 @@ public class ObjectData implements Serializable
         this.dateLoad = dateLoad;
     }
 
-    public Object getAddressNote() {
+    public String getAddressNote() {
         return addressNote;
     }
 
-    public void setAddressNote(Object addressNote) {
+    public void setAddressNote(String addressNote) {
         this.addressNote = addressNote;
     }
 
@@ -186,19 +185,19 @@ public class ObjectData implements Serializable
         this.objectCn = objectCn;
     }
 
-    public Object getObjectCon() {
+    public String getObjectCon() {
         return objectCon;
     }
 
-    public void setObjectCon(Object objectCon) {
+    public void setObjectCon(String objectCon) {
         this.objectCon = objectCon;
     }
 
-    public Object getObjectInv() {
+    public String getObjectInv() {
         return objectInv;
     }
 
-    public void setObjectInv(Object objectInv) {
+    public void setObjectInv(String objectInv) {
         this.objectInv = objectInv;
     }
 
@@ -234,19 +233,19 @@ public class ObjectData implements Serializable
         this.brkStatus = brkStatus;
     }
 
-    public Object getBrkDate() {
+    public String getBrkDate() {
         return brkDate;
     }
 
-    public void setBrkDate(Object brkDate) {
+    public void setBrkDate(String brkDate) {
         this.brkDate = brkDate;
     }
 
-    public Object getFormRights() {
+    public String getFormRights() {
         return formRights;
     }
 
-    public void setFormRights(Object formRights) {
+    public void setFormRights(String formRights) {
         this.formRights = formRights;
     }
 

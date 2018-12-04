@@ -3,6 +3,7 @@
 	<name>rosreestr</name>
 	<comment></comment>
 	<projects>
+		<project>geocoder</project>
 	</projects>
 	<buildSpec>
 		<buildCommand>

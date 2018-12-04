@@ -1,7 +1,14 @@
 package ru.smartsarov.rosreestr;
 
+import java.util.HashMap;
 import java.util.Map;
+import java.util.Properties;
+
 import static java.util.Map.entry;
+
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.nio.charset.Charset;
 
 public final class Constants {
 	/** PKK5 Rosreestr API */
@@ -23,7 +30,8 @@ public final class Constants {
 	 * <br>Пример: http://rosreestr.ru/api/online/region_types/104201000000
 	 */
 	public static final String ROSREESTR_API_REGION_TYPES_URL = "http://rosreestr.ru/api/online/region_types/";
-	
+
+
 	/** <b>2. Получение информации о земельном участке или объекте недвижимости по идентификатору</b>
 	 *	<b>http://rosreestr.ru/api/online/fir_object/{object-id}. {object-id} - идентификатор объекта из {@link ROSREESTR_API_NUMBER_URL}</b>
 	 * 	<br>Пример: http://rosreestr.ru/api/online/fir_object/2:56:30302:639
@@ -114,7 +122,25 @@ public final class Constants {
 	        entry("021", "Незастроенная площадь"),
 	        entry("022", "Значение площади отсутствует")
 			);
-
-	private Constants() {
+	
+	public static final Map<String, String> UTIL_NAMES = getUtilNames();
+	
+	public static final Map<String, String> getUtilNames() {
+		Map<String, String> utilNames = new HashMap<>();
+		Properties props = new Properties();
+		
+		try {
+			props.load(new InputStreamReader(Constants.class.getResourceAsStream("/usage_clsf"), Charset.forName("UTF-8")));
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+		props.keySet().stream().forEach(key -> utilNames.put(key.toString(), props.getProperty(key.toString())));
+		
+		return utilNames;
+	}
+	
+	public static final String GIS_ZHKH_KRSN_URL = "https://api.dom.tcsarov.ru:9443/houses";
+	
+	private Constants() throws IOException {
 	}
 }

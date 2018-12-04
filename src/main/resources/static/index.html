@@ -9,7 +9,7 @@
 		<li>fp - Форма собственности</li>
 		<li>Кадастровая стоимость, собирается из двух полей, cad_cost и cad_unit, где cad_unit - код единицы измерения стоимости </li>
 		<li>Декларированная площадь - собирается из трех полей - area_value, area_type и area_unit, где, area_type - тип площади , area_unit - код единицы измерения площади</li>
-		<li>Разрешенное использование: код - util_code, описание - Описание берется по коду util_code. Список разрешенных использований по классификатору (см. раздел 3.3) по документу - util_by_doc</li>
+		<li>Разрешенное использование: util_code - код, util_name - описание, util_by_doc - список разрешенных использований по классификатору (см. раздел 3.3) по документу</li>
 		<li>date_create - Дата постановки на учет</li>
 		<li>cad_record_date -  Дата изменения сведений в ГКН</li>
 		<li>rights_reg - Признак того, что на объект недвижимости зарегистрированы в ЕГРП действующие права: 0 - нет прав, 1 - есть права</li>
@@ -22,6 +22,12 @@
 		<li> co_name - "ООО Техническое Бюро Кадастра"</li>
 		<li> lastmodified - "Tue, 19 Jul 2016 19:21:39 GMT",</li>
 	</ul>
+	<p>Пример:</p>
+	<span>"cad_eng_data": {</span>
+    <br><span>"actual_date": "Mon, 24 Apr 2017 00:00:00 GMT",</span>
+    <br><span>	"co_name": "ООО \"ГИПРОЗЕМ\"",</span>
+    <br><span>	"lastmodified": "Mon, 24 Apr 2017 20:46:20 GMT"</span>
+    <br><span>}</span>
 	<h4>Кадастровые номера</h4>
 	<ul>
 		<li>cn - кадастровый номер земельного участка (ЗУ)</li>
@@ -31,15 +37,15 @@
 	</ul>
 	<h4>Примеры оформления</h4>
 	<ul>
-		<li><a href="https://rosreestr.ru/wps/portal/p/cc_ib_portal_services/online_request/!ut/p/z1/pVFNU4MwEP01vTYbWirlFttO1Wr9aGsLFybgCigkTAjO-O9NgLHOaPVgJofs7nv73m5ISA4kFPwtT7nOpeCFiYNwEi3vxws6G9PV8p6eAbtkKzqiS4CtS_a_Am4pCf_DNwDLhxOHgeGHv0rMnD8A1uJfIlckTAsZd_tgIh55KQkVPqNCNWyUSWdaV_4ABlC9vrpDJWuFWGs1VM0AfiJlstbk8A1MArOOswjoBaNs7Kxu59spsIcRPF6vHQeAko11m0ihlSwKVCQYwAa5SjKW2C-z1Uw2NZpO5imLp0g0ZWyBNjYqiPrz3SS6UT2UV1zpEkVfTXjLJIHr-NTzATyAycSn42ObSL9XhmwC6JKmQVTJOm-NBO7UZlWeZjpSmPaiTfyCSa8RN3nxlIu-ZDAtr4Wh1gUe3dTtiBHvZgyMc2zHi186k18wnakZm0fr3c354sGWUCRmCYqLBHsrVbk7QH5X7j3twaj0Tlz2Af9QeEc!/p0/IZ7_01HA1A42KODT90AR30VLN22001=CZ6_GQ4E1C41KGQ170AIAK131G00T5=MEcontroller!QCPObjectDataController==/?object_data_id=52:18:80066:14&dbName=firLite&region_key=152">Справочная информация по объектам недвижимости в режиме online</a></li>
-		<li><a href="http://pkk5.rosreestr.ru/#x=4898045.10752845&y=7611378.883881269&z=16&text=52%3A18%3A0080066%3A14&type=1&app=search&opened=1">Публичная кадастровая карта</a></li>
+		<li><a target="_blank" rel="noopener noreferrer" href="https://rosreestr.ru/wps/portal/p/cc_ib_portal_services/online_request/!ut/p/z1/pVBNc4IwEP01PWeDiOgtRcd2bLV-tcKFCTEDcSAwMem0_74J0LEX9dBMLvv27XtvFyXogBJJP0VOtaglLW0dJ0E6X_szHPl4MV_jEZBnssADPAfYDdHHTcIKo-Q_85bg5uHKI2Dnk5sWkXeH4CLeM4ltyFEK-Ilg4nuL1XQ3BrIZwPvL0vMAMNo6DVZLreqy5ArFD7DlVLGCMHdI1z23daq_G47iiEzT5f71cbZxrcyI8ihkbn2cDD2m0lQoHnoTHE4AQoAgmGDfNRXPnV78R5F2FrFWhrewyU6c6Y5T1ObMe7qmSqdNfRYdfzjuUMW5_nVuNCvojn9ZwMPhOOhstC55xWXPqrNTl88VXDJTZYpKxlObrWeU7QaZO8TFo1_dFtBuIvJCX2YsbJg2qg9LGxu292yq_QHEW1WFg6v_B-H_1hs!/p0/IZ7_01HA1A42KODT90AR30VLN22001=CZ6_GQ4E1C41KGQ170AIAK131G00T5=MEcontroller!QCPObjectDataController==/?object_data_id=52:18:80066:14&dbName=firLite&region_key=152">Справочная информация по объектам недвижимости в режиме online</a></li>
+		<li><a target="_blank" rel="noopener noreferrer" href="http://pkk5.rosreestr.ru/#x=4898045.10752845&y=7611378.883881269&z=16&text=52%3A18%3A0080066%3A14&type=1&app=search&opened=1">Публичная кадастровая карта</a></li>
 	</ul>
-	<h4>Параметр для метода <a href="http://sarov.us.to:9900/rosreestr/search/">search</a></h4>
+	<h4>Параметр для метода <a target="_blank" rel="noopener noreferrer" href="http://sarov.us.to:9900/rosreestr/search/">search</a></h4>
 	<p>Может принимать значения маски кадастрового номера, адреса, координат [x y]. Примеры: 61:26:0600024:*, text=арзамас ленина 20, text=56.309636 44.024316</p>
 	<ul>
-		<li><a href="http://sarov.us.to:9900/rosreestr/search/61:26:0600024:*">Поиск по маске</a></li>
-		<li><a href="http://sarov.us.to:9900/rosreestr/search/арзамас ленина 20">Поиск по адресу</a></li>
-		<li><a href="http://sarov.us.to:9900/rosreestr/search/56.263857 44.000369">Поиск по координатам</a></li>
+		<li><a target="_blank" rel="noopener noreferrer" href="http://sarov.us.to:9900/rosreestr/search/61:26:0600024:*">Поиск по маске</a></li>
+		<li><a target="_blank" rel="noopener noreferrer" href="http://sarov.us.to:9900/rosreestr/search/арзамас ленина 20">Поиск по адресу</a></li>
+		<li><a target="_blank" rel="noopener noreferrer" href="http://sarov.us.to:9900/rosreestr/search/56.263857 44.000369">Поиск по координатам</a></li>
 	</ul>
 </body>
 </html>

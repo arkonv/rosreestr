@@ -5,9 +5,9 @@ import java.io.Serializable;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
-public class Attrs implements Serializable
-{
-
+public class Attrs implements Serializable {
+    private final static long serialVersionUID = -2066763038941808022L;
+    
     @SerializedName("adate")
     @Expose
     private String adate;
@@ -82,13 +82,13 @@ public class Attrs implements Serializable
     private Integer reg;
     @SerializedName("rifr")
     @Expose
-    private Object rifr;
+    private String rifr;
     @SerializedName("rights_reg")
     @Expose
     private Integer rightsReg;
     @SerializedName("sale")
     @Expose
-    private Object sale;
+    private String sale;
     @SerializedName("statecd")
     @Expose
     private String statecd;
@@ -97,8 +97,11 @@ public class Attrs implements Serializable
     private String utilByDoc;
     @SerializedName("util_code")
     @Expose
-    private Object utilCode;
-    private final static long serialVersionUID = -2066763038941808022L;
+    private String utilCode;
+    
+    @SerializedName("util_code_desc")
+    @Expose
+    private String utilCodeDesc;
 
     /**
      * No args constructor for use in serialization
@@ -140,7 +143,7 @@ public class Attrs implements Serializable
      * @param rayon
      * @param rayonCn
      */
-    public Attrs(String adate, String address, String annoText, String areaType, String areaUnit, Double areaValue, Double cadCost, CadEngData cadEngData, String cadRecordDate, String cadUnit, String categoryType, String cn, String dateCost, String dateCreate, String fp, String id, String kvartal, String kvartalCn, String okrug, String okrugCn, String pubdate, String rayon, String rayonCn, Integer reg, Object rifr, Integer rightsReg, Object sale, String statecd, String utilByDoc, Object utilCode) {
+    public Attrs(String adate, String address, String annoText, String areaType, String areaUnit, Double areaValue, Double cadCost, CadEngData cadEngData, String cadRecordDate, String cadUnit, String categoryType, String cn, String dateCost, String dateCreate, String fp, String id, String kvartal, String kvartalCn, String okrug, String okrugCn, String pubdate, String rayon, String rayonCn, Integer reg, String rifr, Integer rightsReg, String sale, String statecd, String utilByDoc, String utilCode) {
         super();
         this.adate = adate;
         this.address = address;
@@ -370,7 +373,7 @@ public class Attrs implements Serializable
         return rifr;
     }
 
-    public void setRifr(Object rifr) {
+    public void setRifr(String rifr) {
         this.rifr = rifr;
     }
 
@@ -386,7 +389,7 @@ public class Attrs implements Serializable
         return sale;
     }
 
-    public void setSale(Object sale) {
+    public void setSale(String sale) {
         this.sale = sale;
     }
 
@@ -406,144 +409,19 @@ public class Attrs implements Serializable
         this.utilByDoc = utilByDoc;
     }
 
-    public Object getUtilCode() {
+    public String getUtilCode() {
         return utilCode;
     }
 
-    public void setUtilCode(Object utilCode) {
+    public void setUtilCode(String utilCode) {
         this.utilCode = utilCode;
     }
 
-    @Override
-    public String toString() {
-        StringBuilder sb = new StringBuilder();
-        sb.append(Attrs.class.getName()).append('@').append(Integer.toHexString(System.identityHashCode(this))).append('[');
-        sb.append("adate");
-        sb.append('=');
-        sb.append(((this.adate == null)?"<null>":this.adate));
-        sb.append(',');
-        sb.append("address");
-        sb.append('=');
-        sb.append(((this.address == null)?"<null>":this.address));
-        sb.append(',');
-        sb.append("annoText");
-        sb.append('=');
-        sb.append(((this.annoText == null)?"<null>":this.annoText));
-        sb.append(',');
-        sb.append("areaType");
-        sb.append('=');
-        sb.append(((this.areaType == null)?"<null>":this.areaType));
-        sb.append(',');
-        sb.append("areaUnit");
-        sb.append('=');
-        sb.append(((this.areaUnit == null)?"<null>":this.areaUnit));
-        sb.append(',');
-        sb.append("areaValue");
-        sb.append('=');
-        sb.append(((this.areaValue == null)?"<null>":this.areaValue));
-        sb.append(',');
-        sb.append("cadCost");
-        sb.append('=');
-        sb.append(((this.cadCost == null)?"<null>":this.cadCost));
-        sb.append(',');
-        sb.append("cadEngData");
-        sb.append('=');
-        sb.append(((this.cadEngData == null)?"<null>":this.cadEngData));
-        sb.append(',');
-        sb.append("cadRecordDate");
-        sb.append('=');
-        sb.append(((this.cadRecordDate == null)?"<null>":this.cadRecordDate));
-        sb.append(',');
-        sb.append("cadUnit");
-        sb.append('=');
-        sb.append(((this.cadUnit == null)?"<null>":this.cadUnit));
-        sb.append(',');
-        sb.append("categoryType");
-        sb.append('=');
-        sb.append(((this.categoryType == null)?"<null>":this.categoryType));
-        sb.append(',');
-        sb.append("cn");
-        sb.append('=');
-        sb.append(((this.cn == null)?"<null>":this.cn));
-        sb.append(',');
-        sb.append("dateCost");
-        sb.append('=');
-        sb.append(((this.dateCost == null)?"<null>":this.dateCost));
-        sb.append(',');
-        sb.append("dateCreate");
-        sb.append('=');
-        sb.append(((this.dateCreate == null)?"<null>":this.dateCreate));
-        sb.append(',');
-        sb.append("fp");
-        sb.append('=');
-        sb.append(((this.fp == null)?"<null>":this.fp));
-        sb.append(',');
-        sb.append("id");
-        sb.append('=');
-        sb.append(((this.id == null)?"<null>":this.id));
-        sb.append(',');
-        sb.append("kvartal");
-        sb.append('=');
-        sb.append(((this.kvartal == null)?"<null>":this.kvartal));
-        sb.append(',');
-        sb.append("kvartalCn");
-        sb.append('=');
-        sb.append(((this.kvartalCn == null)?"<null>":this.kvartalCn));
-        sb.append(',');
-        sb.append("okrug");
-        sb.append('=');
-        sb.append(((this.okrug == null)?"<null>":this.okrug));
-        sb.append(',');
-        sb.append("okrugCn");
-        sb.append('=');
-        sb.append(((this.okrugCn == null)?"<null>":this.okrugCn));
-        sb.append(',');
-        sb.append("pubdate");
-        sb.append('=');
-        sb.append(((this.pubdate == null)?"<null>":this.pubdate));
-        sb.append(',');
-        sb.append("rayon");
-        sb.append('=');
-        sb.append(((this.rayon == null)?"<null>":this.rayon));
-        sb.append(',');
-        sb.append("rayonCn");
-        sb.append('=');
-        sb.append(((this.rayonCn == null)?"<null>":this.rayonCn));
-        sb.append(',');
-        sb.append("reg");
-        sb.append('=');
-        sb.append(((this.reg == null)?"<null>":this.reg));
-        sb.append(',');
-        sb.append("rifr");
-        sb.append('=');
-        sb.append(((this.rifr == null)?"<null>":this.rifr));
-        sb.append(',');
-        sb.append("rightsReg");
-        sb.append('=');
-        sb.append(((this.rightsReg == null)?"<null>":this.rightsReg));
-        sb.append(',');
-        sb.append("sale");
-        sb.append('=');
-        sb.append(((this.sale == null)?"<null>":this.sale));
-        sb.append(',');
-        sb.append("statecd");
-        sb.append('=');
-        sb.append(((this.statecd == null)?"<null>":this.statecd));
-        sb.append(',');
-        sb.append("utilByDoc");
-        sb.append('=');
-        sb.append(((this.utilByDoc == null)?"<null>":this.utilByDoc));
-        sb.append(',');
-        sb.append("utilCode");
-        sb.append('=');
-        sb.append(((this.utilCode == null)?"<null>":this.utilCode));
-        sb.append(',');
-        if (sb.charAt((sb.length()- 1)) == ',') {
-            sb.setCharAt((sb.length()- 1), ']');
-        } else {
-            sb.append(']');
-        }
-        return sb.toString();
-    }
+    public String getUtilCodeDesc() {
+		return utilCodeDesc;
+	}
 
+	public void setUtilCodeDesc(String utilCodeDesc) {
+		this.utilCodeDesc = utilCodeDesc;
+	}
 }
